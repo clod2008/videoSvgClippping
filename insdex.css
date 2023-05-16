@@ -1,0 +1,33 @@
+body{
+    margin: 0px;
+}
+.warper{
+    position: relative;
+}
+.baseVideo{
+    width: 100%;
+}
+.topVideoWarper{
+    position: absolute;
+    top: 0px;
+    display: flex;
+    height: 100%;
+    right: 15%
+}
+.topVideo{
+    display: flex;
+    align-self: center;
+    width: 740px;
+    height: 740px;
+}
+#transparent{
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    opacity: 0.6;
+}
+.svg-clipped-whell {
+    -webkit-clip-path: url(#svgWhellPath);
+    clip-path: url(#svgWhelltPath);
+}
