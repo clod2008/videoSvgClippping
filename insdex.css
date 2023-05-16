@@ -17,8 +17,8 @@ body{
 .topVideo{
     display: flex;
     align-self: center;
-    width: 740px;
-    height: 740px;
+    width: 746px;
+    height: 746px;
 }
 #transparent{
     z-index: 10;
