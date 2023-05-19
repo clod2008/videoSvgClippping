@@ -12,15 +12,22 @@ body{
     top: 0px;
     display: flex;
     height: 100%;
-    right: 15%
+    right: 15%;
 }
 .topVideo{
     display: flex;
     align-self: center;
     width: 746px;
     height: 746px;
-
 }
+.topVideo560{
+    display: flex;
+    align-self: center;
+    width: 560px;
+    height: 560px
+}
+
+
 #transparent{
     z-index: 10;
     position: absolute;
@@ -31,4 +38,8 @@ body{
 .svg-clipped-whell {
     -webkit-clip-path: url(#svgWhellPath);
     clip-path: url(#svgWhelltPath);
+}
+.svg-clipped-whell560 {
+    -webkit-clip-path: url(#svgWhellPath560);
+    clip-path: url(#svgWhelltPath560);
 }
