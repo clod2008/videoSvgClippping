@@ -26,9 +26,34 @@ body{
     width: 560px;
     height: 560px
 }
+.topVideo448{
+    display: flex;
+    align-self: center;
+    width: 448px;
+    height: 448px
+}
+.topVideo398{
+    display: flex;
+    align-self: center;
+    width: 398px;
+    height: 398px
+}
+.topVideo373{
+    display: flex;
+    align-self: center;
+    width: 373px;
+    height: 373px
+}
 
 
 #transparent{
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    opacity: 0.6;
+}
+.transparent{
     z-index: 10;
     position: absolute;
     display: flex;
@@ -42,4 +67,16 @@ body{
 .svg-clipped-whell560 {
     -webkit-clip-path: url(#svgWhellPath560);
     clip-path: url(#svgWhelltPath560);
+}
+.svg-clipped-whell448 {
+    -webkit-clip-path: url(#svgWhellPath448);
+    clip-path: url(#svgWhelltPath448);
+}
+.svg-clipped-whell398 {
+    -webkit-clip-path: url(#svgWhellPath398);
+    clip-path: url(#svgWhelltPath398);
+}
+.svg-clipped-whell373 {
+    -webkit-clip-path: url(#svgWhellPath373);
+    clip-path: url(#svgWhelltPath373);
 }
