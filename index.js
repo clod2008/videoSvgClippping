@@ -4,15 +4,21 @@ const topVideoContainer = document.getElementById('topVideoContainer')
 const topVideo = document.getElementById('topVideo')
 const transparent = document.getElementById('transparent')
 
+window.addEventListener("load", function (event) {
+    console.log("'Todos los recursos terminaron de cargar!");
+});
+
 
 // Screen size
 const screen = window.innerWidth
 console.log(screen)
 
+
 // Media selector
 switch (true) {
     case (screen > 1920):
         videoBase.setAttribute("src", './assets/videos/2560px by 1283px.mp4')
+        videoBase.setAttribute("poster", './assets/baseVideo.jpg')
         topVideoContainer.classList.add('topVideo')
         topVideo.classList.add('svg-clipped-whell')
         topVideo.setAttribute("src", './assets/videos/Wheel toBack.mp4')
@@ -26,6 +32,7 @@ switch (true) {
         break;
     case (screen <= 1920 && screen > 1535):
         videoBase.setAttribute("src", './assets/videos/1920px by 961px.mp4')
+        videoBase.setAttribute("poster", './assets/baseVideo.jpg')
         topVideoContainer.classList.add('topVideo560')
         topVideo.setAttribute("src", './assets/videos/Wheel toBack_560.mp4')
         topVideo.classList.add('svg-clipped-whell560')
@@ -39,6 +46,7 @@ switch (true) {
         break;
     case (screen <= 1535 && screen > 1366):
         videoBase.setAttribute("src", './assets/videos/1536px by 769px.mp4')
+        videoBase.setAttribute("poster", './assets/baseVideo.jpg')
         topVideoContainer.classList.add('topVideo448')
         topVideo.setAttribute("src", './assets/videos/Wheel toBack_448.mp4')
         topVideo.classList.add('svg-clipped-whell448')

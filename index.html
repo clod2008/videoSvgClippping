@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="main">
-        <div class="warper" style="max-width: 1920px;">
+        <div class="warper">
             <video id="baseVideo" class="baseVideo" preload="true" autoplay="true" muted="muted" volume="0">
                 <source src="" type="video/mp4">
             </video>
@@ -27,6 +27,7 @@
 
     </div>
     <!-- SVG Clip data -->
+<div style="position:fixed; top:0px; z-index: -10;" >
     <svg width="746" height="746" viewBox="0 0 746 746" fill="none" xmlns="http://www.w3.org/2000/svg">
         <clipPath id="svgWhelltPath">
             <path
@@ -93,6 +94,7 @@
                 fill="#475F70" />
         </clipPath>
     </svg>
+</div>
 
     <script src="./index.js"></script>
 </body>
