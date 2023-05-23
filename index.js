@@ -4,14 +4,15 @@ const topVideoContainer = document.getElementById('topVideoContainer')
 const topVideo = document.getElementById('topVideo')
 const transparent = document.getElementById('transparent')
 
-window.addEventListener("load", function (event) {
-    console.log("'Todos los recursos terminaron de cargar!");
-});
+// window.addEventListener("load", function (event) {
+//     console.log("'Todos los recursos terminaron de cargar!");
+// });
 
 
 // Screen size
 const screen = window.innerWidth
 console.log(screen)
+
 
 
 // Media selector
@@ -59,5 +60,9 @@ switch (true) {
             `
         break;
 }
+
+videoBase.addEventListener( 'loadeddata', ()=>{
+    console.log('video cargado')
+});
 
 
