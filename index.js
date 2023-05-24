@@ -83,7 +83,7 @@ document.onreadystatechange = () => {
 // if (videoBase.networkState === 2)
 
 videoBase.addEventListener('loadstart', function () {
-    if (videoBase.networkState === 2) {
+    if (videoBase.networkState === 2 && topVideo.networkState === 2) {
         console.log('El video está listo para reproducirse');
         playVideos()
     }
