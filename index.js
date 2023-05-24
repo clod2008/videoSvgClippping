@@ -12,11 +12,11 @@ console.log(screen)
 // Media selector
 switch (true) {
     case (screen > 1920):
-        videoBase.setAttribute("src", './assets/videos/2560px by 1283px.mp4')
+        videoBase.setAttribute("src", './assets/videos/2560px by 1283px.webm')
         videoBase.setAttribute("poster", './assets/baseVideo.jpg')
         topVideoContainer.classList.add('topVideo')
         topVideo.classList.add('svg-clipped-whell')
-        topVideo.setAttribute("src", './assets/videos/Wheel toBack.mp4')
+        topVideo.setAttribute("src", './assets/videos/Wheel toBack.webm')
         transparent.innerHTML = `
             <svg width="746" height="746" viewBox="0 0 746 746" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -26,10 +26,10 @@ switch (true) {
             `
         break;
     case (screen <= 1920 && screen > 1535):
-        videoBase.setAttribute("src", './assets/videos/1920px by 961px.mp4')
+        videoBase.setAttribute("src", './assets/videos/1920px by 961px.webm')
         videoBase.setAttribute("poster", './assets/baseVideo.jpg')
         topVideoContainer.classList.add('topVideo560')
-        topVideo.setAttribute("src", './assets/videos/Wheel toBack_560.mp4')
+        topVideo.setAttribute("src", './assets/videos/Wheel toBack_560.webm')
         topVideo.classList.add('svg-clipped-whell560')
         transparent.innerHTML = `
             <svg width="560" height="560" viewBox="0 0 560 560" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,10 +40,10 @@ switch (true) {
             `
         break;
     case (screen <= 1535 && screen > 1366):
-        videoBase.setAttribute("src", './assets/videos/1536px by 769px.mp4')
+        videoBase.setAttribute("src", './assets/videos/1536px by 769px.webm')
         videoBase.setAttribute("poster", './assets/baseVideo.jpg')
         topVideoContainer.classList.add('topVideo448')
-        topVideo.setAttribute("src", './assets/videos/Wheel toBack_448.mp4')
+        topVideo.setAttribute("src", './assets/videos/Wheel toBack_448.webm')
         topVideo.classList.add('svg-clipped-whell448')
         transparent.innerHTML = `
             <svg width="448" height="448" viewBox="0 0 448 448" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,6 +78,10 @@ videoBase.addEventListener('loadstart', function () {
         }, 1000);
     }
 });
+
+
+
+
 
 
 
