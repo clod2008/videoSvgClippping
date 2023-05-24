@@ -59,14 +59,6 @@ switch (true) {
         break;
 }
 
-//Video verification
-videoBase.addEventListener( 'loadedmetadata', ()=>{
-    baseVideoReady = true
-});
-
-topVideo.addEventListener( 'loadedmetadata', ()=>{
-    topVideoReady = true
-});
 
 
 // TODO: try and catch
@@ -83,6 +75,14 @@ const playVideos = async ()=>{
 
 window.addEventListener("load", (event) => {
     console.log("page is fully loaded");
+    //Video verification
+    videoBase.addEventListener( 'loadedmetadata', ()=>{
+        baseVideoReady = true
+    });
+    
+    topVideo.addEventListener( 'loadedmetadata', ()=>{
+        topVideoReady = true
+    });
     setTimeout(() => {
         playVideos()
     }, 500);
