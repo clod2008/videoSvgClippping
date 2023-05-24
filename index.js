@@ -16,7 +16,7 @@ switch (true) {
         videoBase.setAttribute("poster", './assets/baseVideo.jpg')
         topVideoContainer.classList.add('topVideo')
         topVideo.classList.add('svg-clipped-whell')
-        topVideo.setAttribute("src", './assets/videos/Wheel toBack.webm')
+        topVideo.setAttribute("src", './assets/videos/Wheel toBack.mp4')
         transparent.innerHTML = `
             <svg width="746" height="746" viewBox="0 0 746 746" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -29,7 +29,7 @@ switch (true) {
         videoBase.setAttribute("src", './assets/videos/1920px by 961px.webm')
         videoBase.setAttribute("poster", './assets/baseVideo.jpg')
         topVideoContainer.classList.add('topVideo560')
-        topVideo.setAttribute("src", './assets/videos/Wheel toBack_560.webm')
+        topVideo.setAttribute("src", './assets/videos/Wheel toBack_560.mp4')
         topVideo.classList.add('svg-clipped-whell560')
         transparent.innerHTML = `
             <svg width="560" height="560" viewBox="0 0 560 560" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@ switch (true) {
         videoBase.setAttribute("src", './assets/videos/1536px by 769px.webm')
         videoBase.setAttribute("poster", './assets/baseVideo.jpg')
         topVideoContainer.classList.add('topVideo448')
-        topVideo.setAttribute("src", './assets/videos/Wheel toBack_448.webm')
+        topVideo.setAttribute("src", './assets/videos/Wheel toBack_448.mp4')
         topVideo.classList.add('svg-clipped-whell448')
         transparent.innerHTML = `
             <svg width="448" height="448" viewBox="0 0 448 448" fill="none" xmlns="http://www.w3.org/2000/svg">
