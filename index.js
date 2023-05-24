@@ -64,7 +64,7 @@ const playVideos =  ()=>{
 
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
-        
+        console.log(document.readyState)
         videoBase.addEventListener("canplaythrough", () => {
             console.log(
                 "I think I can play through the entire video without having to stop to buffer."
@@ -75,6 +75,8 @@ document.onreadystatechange = () => {
         });
     }
 };
+
+
 
 
 
