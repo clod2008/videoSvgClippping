@@ -77,8 +77,6 @@ videoBase.addEventListener('loadstart', function () {
         console.log('Videos are Ready');
         console.log(videoBase.networkState, topVideo.networkState)
         setTimeout(() => {
-            console.log(videoBase.networkState)
-
             playVideos()
         }, 1000);
     }
