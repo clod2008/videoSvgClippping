@@ -4,15 +4,13 @@ const topVideoContainer = document.getElementById('topVideoContainer')
 const topVideo = document.getElementById('topVideo')
 const transparent = document.getElementById('transparent')
 
-// window.addEventListener("load", function (event) {
-//     console.log("'Todos los recursos terminaron de cargar!");
-// });
-
+// declaration of variables
+let baseVideoReady = false
+let topVideoReady = false
 
 // Screen size
 const screen = window.innerWidth
 console.log(screen)
-
 
 
 // Media selector
@@ -61,8 +59,32 @@ switch (true) {
         break;
 }
 
-videoBase.addEventListener( 'loadeddata', ()=>{
-    console.log('video cargado')
+//Video verification
+videoBase.addEventListener( 'loadedmetadata', ()=>{
+    baseVideoReady = true
 });
+
+topVideo.addEventListener( 'loadedmetadata', ()=>{
+    topVideoReady = true
+});
+
+
+// TODO: try and catch
+
+const playVideos = ()=>{
+    if (baseVideoReady === true && topVideoReady === true){
+        videoBase.play()
+        topVideo.play()
+    } else {
+        console.log('not ready')
+        playVideos()
+    } 
+} 
+
+
+
+setTimeout(() => {
+    playVideos()
+}, 500);
 
 
