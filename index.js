@@ -71,20 +71,22 @@ topVideo.addEventListener( 'loadedmetadata', ()=>{
 
 // TODO: try and catch
 
-const playVideos = ()=>{
+const playVideos = async ()=>{
     if (baseVideoReady === true && topVideoReady === true){
-        videoBase.play()
-        topVideo.play()
+        await videoBase.play()
+        await topVideo.play()
     } else {
         console.log('not ready')
         playVideos()
     } 
 } 
 
+window.addEventListener("load", (event) => {
+    console.log("page is fully loaded");
+    setTimeout(() => {
+        playVideos()
+    }, 500);
+});
 
-
-setTimeout(() => {
-    playVideos()
-}, 500);
 
 
