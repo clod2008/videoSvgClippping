@@ -62,6 +62,8 @@ const playVideos =  ()=>{
 } 
 
 
+
+
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
         console.log(document.readyState)
@@ -70,13 +72,22 @@ document.onreadystatechange = () => {
                 "I think I can play through the entire video without having to stop to buffer."
                 );
             });
-            setTimeout(() => {
-                playVideos()
-            }, 1000);
+            // setTimeout(() => {
+            //     console.log(videoBase.networkState)
+                
+            //     playVideos()
+            // }, 1000);
     }
 };
 
+// if (videoBase.networkState === 2)
 
+videoBase.addEventListener('loadstart', function () {
+    if (videoBase.networkState === 2) {
+        console.log('El video está listo para reproducirse');
+        playVideos()
+    }
+});
 
 
 
