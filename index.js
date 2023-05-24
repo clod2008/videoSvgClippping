@@ -4,10 +4,6 @@ const topVideoContainer = document.getElementById('topVideoContainer')
 const topVideo = document.getElementById('topVideo')
 const transparent = document.getElementById('transparent')
 
-// declaration of variables
-let baseVideoReady = false
-let topVideoReady = false
-
 // Screen size
 const screen = window.innerWidth
 console.log(screen)
@@ -60,27 +56,10 @@ switch (true) {
 }
 
 
-
-
-
 const playVideos =  ()=>{
     videoBase.play()
     topVideo.play()
 } 
-
-window.addEventListener("load", (event) => {
-    console.log("page is fully loaded");
-    //Video verification
-    videoBase.addEventListener( 'loadedmetadata', ()=>{
-        baseVideoReady = true
-    });
-    
-    topVideo.addEventListener( 'loadedmetadata', ()=>{
-        topVideoReady = true
-    });
-});
-
-
 
 videoBase.addEventListener("canplaythrough", (event) => {
     console.log(
