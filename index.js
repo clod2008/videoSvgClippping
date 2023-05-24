@@ -55,14 +55,11 @@ switch (true) {
         break;
 }
 
+// Video Loader
 
 const playVideos = () => {
     videoBase.play()
     topVideo.play()
-}
-
-const videosAreLoadet = ()=>{
-
 }
 
 document.onreadystatechange = () => {
