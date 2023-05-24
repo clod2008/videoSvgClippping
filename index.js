@@ -83,10 +83,16 @@ window.addEventListener("load", (event) => {
     topVideo.addEventListener( 'loadedmetadata', ()=>{
         topVideoReady = true
     });
+});
+
+
+
+videoBase.addEventListener("canplaythrough", (event) => {
+    console.log(
+        "I think I can play through the entire video without having to stop to buffer."
+        );
     setTimeout(() => {
         playVideos()
     }, 500);
 });
-
-
 
