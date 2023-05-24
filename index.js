@@ -61,16 +61,11 @@ switch (true) {
 
 
 
-// TODO: try and catch
 
-const playVideos = async ()=>{
-    if (baseVideoReady === true && topVideoReady === true){
-        await videoBase.play()
-        await topVideo.play()
-    } else {
-        console.log('not ready')
-        playVideos()
-    } 
+
+const playVideos =  ()=>{
+    videoBase.play()
+    topVideo.play()
 } 
 
 window.addEventListener("load", (event) => {
