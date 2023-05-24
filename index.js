@@ -69,10 +69,10 @@ document.onreadystatechange = () => {
             console.log(
                 "I think I can play through the entire video without having to stop to buffer."
                 );
+            });
             setTimeout(() => {
                 playVideos()
             }, 1000);
-        });
     }
 };
 
