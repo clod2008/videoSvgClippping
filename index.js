@@ -17,7 +17,7 @@ switch (true) {
         topVideoContainer.classList.add('topVideo')
         topVideo.classList.add('svg-clipped-whell')
         topVideo.setAttribute("src", './assets/videos/Wheel toBack.mp4')
-        transparent.innerHTML=`
+        transparent.innerHTML = `
             <svg width="746" height="746" viewBox="0 0 746 746" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M73.2164 373.564C73.2164 300.567 99.1054 231.594 146.495 177.145L94.5921 125.085C33.4739 193.555 0 280.95 0 373.564C0 466.178 33.4739 553.635 94.5921 622.043L146.495 569.983C99.1681 515.471 73.2164 446.498 73.2164 373.564Z"
@@ -31,7 +31,7 @@ switch (true) {
         topVideoContainer.classList.add('topVideo560')
         topVideo.setAttribute("src", './assets/videos/Wheel toBack_560.mp4')
         topVideo.classList.add('svg-clipped-whell560')
-        transparent.innerHTML=`
+        transparent.innerHTML = `
             <svg width="560" height="560" viewBox="0 0 560 560" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M54.9614 280.423C54.9614 225.627 74.3955 173.851 109.97 132.977L71.0075 93.8975C25.1279 145.296 0 210.901 0 280.423C0 349.946 25.1279 415.598 71.0075 466.949L109.97 427.869C74.4426 386.949 54.9614 335.173 54.9614 280.423Z"
@@ -56,38 +56,37 @@ switch (true) {
 }
 
 
-const playVideos =  ()=>{
+const playVideos = () => {
     videoBase.play()
     topVideo.play()
-} 
+}
 
+const videosAreLoadet = ()=>{
 
-
+}
 
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
         console.log(document.readyState)
-        videoBase.addEventListener("canplaythrough", () => {
-            console.log(
-                "I think I can play through the entire video without having to stop to buffer."
-                );
-            });
-            // setTimeout(() => {
-            //     console.log(videoBase.networkState)
-                
-            //     playVideos()
-            // }, 1000);
+        
     }
 };
 
-// if (videoBase.networkState === 2)
-
 videoBase.addEventListener('loadstart', function () {
     if (videoBase.networkState === 2 && topVideo.networkState === 2) {
-        console.log('El video está listo para reproducirse');
-        playVideos()
+        console.log('Videos are Ready');
+        console.log(videoBase.networkState, topVideo.networkState)
+        setTimeout(() => {
+            console.log(videoBase.networkState)
+
+            playVideos()
+        }, 1000);
     }
 });
+
+
+
+
 
 
 
