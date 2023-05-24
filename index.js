@@ -61,18 +61,18 @@ const playVideos =  ()=>{
     topVideo.play()
 } 
 
-// videoBase.addEventListener("canplaythrough", () => {
-//     console.log(
-//         "I think I can play through the entire video without having to stop to buffer."
-//         );
-//     setTimeout(() => {
-//         playVideos()
-//     }, 1000);
-// });
 
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
-        playVideos();
+        
+        videoBase.addEventListener("canplaythrough", () => {
+            console.log(
+                "I think I can play through the entire video without having to stop to buffer."
+                );
+            setTimeout(() => {
+                playVideos()
+            }, 1000);
+        });
     }
 };
 
