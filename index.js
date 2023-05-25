@@ -4,6 +4,8 @@ const topVideoContainer = document.getElementById('topVideoContainer')
 const topVideo = document.getElementById('topVideo')
 const transparent = document.getElementById('transparent')
 
+// import video1920 from './assets/videos/1920px by 961px.webm'
+
 // Screen size
 const screen = window.innerWidth
 console.log(screen)
@@ -79,6 +81,8 @@ videoBase.addEventListener('loadstart', function () {
     }
 });
 
+
+console.log(videoBase)
 
 
 
